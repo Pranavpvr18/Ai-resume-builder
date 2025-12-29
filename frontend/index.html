@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Builder - Create Your Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">🚀 AI Resume Builder</h1>
+            <p class="hero-subtitle">Create an optimized, ATS-friendly resume tailored to your target job description</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div id="message"></div>
+        
+        <form id="resume-form">
+            <h2>Personal Information</h2>
+            
+            <div class="form-group">
+                <label for="fullName">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="jobTitle">Job Title <span class="required">*</span></label>
+                <input type="text" id="jobTitle" name="jobTitle" placeholder="e.g., Software Engineer, Data Analyst" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+            </div>
+            
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" placeholder="City, State / City, Country">
+            </div>
+            
+            <div class="form-group">
+                <label for="portfolio">Portfolio/LinkedIn URL</label>
+                <input type="url" id="portfolio" name="portfolio" placeholder="https://yourportfolio.com">
+            </div>
+            
+            <h2>Skills & Experience</h2>
+            
+            <div class="form-group">
+                <label for="skills">Skills <span class="required">*</span></label>
+                <input type="text" id="skills" name="skills" placeholder="e.g., Python, JavaScript, React, AWS, Docker" required>
+                <p class="helper-text">💡 Enter skills separated by commas. Be specific and include technologies, tools, and methodologies.</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="experience">Work Experience <span class="required">*</span></label>
+                <textarea id="experience" name="experience" class="experience" placeholder="Describe your work experience, responsibilities, and achievements. The AI will enhance it with action verbs and better formatting." required></textarea>
+                <div class="textarea-footer">
+                    <p class="helper-text">💡 Describe your experience in detail. It will be automatically formatted with bullet points.</p>
+                    <span class="char-count"><span id="experience-count">0</span> characters</span>
+                </div>
+            </div>
+            
+            <h2>Job Description</h2>
+            
+            <div class="form-group">
+                <label for="jobDescription">Target Job Description <span class="required">*</span></label>
+                <textarea id="jobDescription" name="jobDescription" class="job-description" placeholder="Paste the job description here. The AI will analyze keywords and calculate a match score based on your skills." required></textarea>
+                <div class="textarea-footer">
+                    <p class="helper-text">💡 Paste the complete job description to optimize your resume and get a match score.</p>
+                    <span class="char-count"><span id="jobDescription-count">0</span> characters</span>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" id="load-sample-btn" class="btn btn-secondary">📝 Load Sample Data</button>
+                <button type="submit" id="submit-btn" class="btn btn-primary btn-block">✨ Generate Resume</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
