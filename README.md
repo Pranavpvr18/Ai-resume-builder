@@ -10,7 +10,7 @@ A minimal professional web application that generates optimized, ATS-friendly re
 - **PDF Export**: Print-friendly design with browser print functionality
 - **LocalStorage**: All data stored locally in browser
 - **Clean ATS-Friendly Template**: Professional resume layout optimized for applicant tracking systems
-###############################################################################################################################################################################################################################
+############################################################################################################################################################
 ## Project Structure
 
 ```
